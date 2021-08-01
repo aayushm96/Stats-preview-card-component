@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+--main-bg: hsl(233, 47%, 7%);
+--card-bg : hsl(244, 38%, 16%);
+--text: hsl(277, 64%, 61%);
+--main-text: hsl(0, 0%, 100%);
+--main-para: hsla(0, 0%, 100%, 0.75);
+--stat: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.text-center{
+    text-align: center;
+}
+body{
+    font-family: 'Lexend Deca',   'Lexend Deca',  sans-serif;
+    font-size: 15px;
+    background-color: hsl(233, 47%, 7%);
+
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+
+    max-width: 1440px ;
+    margin: 0 400px;
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 70% 30%;
+}
+
+.wrapper{
+    overflow: hidden;
+    display: block;
+}
+
+img{
+    overflow: hidden;
+    display: block;
+   max-width: 100%;
+ height: 100%;
+ background-image: contain;
+  
+    
+}
+h1{
+    color: var(--main-text);
+    padding-bottom: 20px;
+}
+
+h2{
+    color: var(--main-text);
+}
+
+
+p{
+    color: var(--main-para);
+}
+span{
+    color: var(--text);
+}
+.py{
+    padding: 80px;
+}
+
+/*  started specific styling --------------------------------------------------------------------------*/
+
+.three{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;    
+    
+}
+img{
+    background-image: url(/image-header-mobile.jpg);
+}
+
+.one{
+    flex-direction: column;
+}
+
+.two{
+    display: flex;
+    justify-content: space-evenly;   
+}
+
+/* running media query for the mobile device--------------------------------- */
+
+@media screen and (max-width:376px) {
+    .main{
+        display: block;
+        height: auto;
+    }
+    
+    .container{
+        max-width: 375px ;
+        margin: 50px 10px;
+        border-radius: 5px;
+        background-color: var(--card-bg);
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3 , 1fr);
+        
+    }
+    .three{
+        
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2;    
+        order:1;
+    }
+    .one{
+        text-align: center;
+        padding: 5px 40px;
+        grid-row-start: 2;
+        
+    }
+    .two{
+        order: 3;
+        grid-row-start: 3;
+        flex-direction: column;
+        justify-content: space-around;  
+        align-items: center;
+        text-align: center;
+} 
+    }
+    
+    
